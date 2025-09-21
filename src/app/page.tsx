@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { motion, useMotionValue, useTransform, useScroll } from "framer-motion";
+import { motion, useTransform, useScroll } from "framer-motion";
 
 /**
  * Minimal Wedding Invitation Design
@@ -258,7 +258,7 @@ function TypographyReveal({
   delay = 0,
 }: {
   text: string;
-  as?: any;
+  as?: React.ElementType;
   className?: string;
   delay?: number;
 }) {

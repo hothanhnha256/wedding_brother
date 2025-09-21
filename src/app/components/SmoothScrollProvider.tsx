@@ -18,8 +18,8 @@ export function SmoothScrollProvider({ children }: SmoothScrollProviderProps) {
     });
 
     // Get scroll value
-    lenis.on("scroll", (e: any) => {
-      // console.log(e)
+    lenis.on("scroll", () => {
+      // console.log('scrolling')
     });
 
     function raf(time: number) {
