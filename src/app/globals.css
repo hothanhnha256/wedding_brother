@@ -1,26 +1,95 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fafaf9; /* stone-50 */
+  --foreground: #1c1917; /* stone-900 */
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
+/* Minimal wedding invitation styling */
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
+}
+
+/* Custom font weights for minimal design */
+.font-light {
+  font-weight: 300;
+}
+
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Enhanced typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+/* Custom underline styles */
+.underline {
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: border-bottom-color 0.3s ease;
+}
+
+.underline:hover {
+  border-bottom-color: transparent;
+}
+
+/* Image hover effects */
+.image-hover {
+  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.image-hover:hover {
+  transform: scale(1.05);
+}
+
+/* Custom CSS cho Skymavis-like effects */
+html {
+  scroll-behavior: smooth;
+}
+
+.bg-gradient-radial {
+  background: radial-gradient(var(--tw-gradient-stops));
+}
+
+/* Thêm một số utility classes */
+.will-change-transform {
+  will-change: transform;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+/* Animation cho loading */
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
+}
+
+.shimmer {
+  animation: shimmer 2s linear infinite;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  background-size: 200px 100%;
 }
