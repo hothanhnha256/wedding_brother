@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import { motion, useTransform, useScroll } from "framer-motion";
-
+import { DoorIntro } from "./components/DoorIntro";
 /**
  * Minimal Wedding Invitation Design
  * Inspired by modern wedding trends: clean, neutral, elegant
@@ -393,6 +393,11 @@ export default function MinimalWeddingInvite() {
 
   return (
     <div className="min-h-screen bg-stone-50 text-stone-800 font-light relative overflow-x-hidden">
+      <DoorIntro
+        onFinish={() => {
+          /* bạn có thể bật nhạc/analytics ở đây */
+        }}
+      />
       {/* Advanced Background Effects */}
       <ScrollProgressBar />
       <FloatingParticles />
