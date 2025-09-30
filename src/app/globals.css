@@ -14,6 +14,27 @@ body {
   letter-spacing: 0.01em;
 }
 
+/* Mobile optimizations */
+@media (max-width: 640px) {
+  body {
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* Prevent horizontal scroll on mobile */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Better touch targets */
+  button,
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
 /* Custom font weights for minimal design */
 .font-light {
   font-weight: 300;
@@ -33,6 +54,22 @@ h5,
 h6 {
   font-weight: 300;
   letter-spacing: -0.02em;
+}
+
+/* Mobile responsive typography */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 /* Custom underline styles */
