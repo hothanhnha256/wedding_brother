@@ -31,6 +31,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
           seconds: Math.floor((difference % (1000 * 60)) / 1000),
         });
       }
+      console.log(difference);
     }, 1000);
 
     return () => clearInterval(timer);
@@ -41,14 +42,14 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
       {Object.entries(timeLeft).map(([unit, value], index) => (
         <motion.div
           key={unit}
-          className="bg-white/90 backdrop-blur-sm rounded-2xl p-4 shadow-lg border border-stone-200"
+          className="bg-white/80 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-gray-200 hover:shadow-xl"
           initial={{ scale: 0, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           transition={{ delay: index * 0.1, duration: 0.5 }}
           whileHover={{ scale: 1.05 }}
         >
           <motion.div
-            className="text-2xl lg:text-3xl font-light text-stone-800"
+            className="text-2xl lg:text-3xl font-light text-gray-900"
             key={value} // Re-animate when value changes
             initial={{ scale: 1.2 }}
             animate={{ scale: 1 }}
@@ -56,7 +57,7 @@ export default function CountdownTimer({ targetDate }: CountdownTimerProps) {
           >
             {value.toString().padStart(2, "0")}
           </motion.div>
-          <div className="text-xs text-stone-600 uppercase tracking-wide mt-1">
+          <div className="text-xs text-gray-600 uppercase tracking-wide mt-1">
             {unit === "days"
               ? "Ngày"
               : unit === "hours"

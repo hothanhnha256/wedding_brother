@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
@@ -18,7 +18,6 @@ export default function OurStorySection() {
   useEffect(() => {
     if (!sectionRef.current || !imageRef.current || !textRef.current) return;
 
-    // GSAP ScrollTrigger animations
     gsap.fromTo(
       imageRef.current,
       { opacity: 0, x: -100, scale: 0.8 },
@@ -58,9 +57,8 @@ export default function OurStorySection() {
     <section
       id="story"
       ref={sectionRef}
-      className="py-20 bg-white relative overflow-hidden"
+      className="py-20 bg-orange-50 relative overflow-hidden"
     >
-      {/* Background decorative elements */}
       <div className="absolute top-20 right-10 w-32 h-32 opacity-5">
         <svg viewBox="0 0 100 100" className="w-full h-full text-stone-200">
           <circle
@@ -78,7 +76,7 @@ export default function OurStorySection() {
         <SmoothReveal delay={0.2}>
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-serif text-stone-800 mb-4">
-              Our Story
+              Chuyện Tình Chúng Tôi
             </h2>
             <div className="w-24 h-1 bg-stone-300 mx-auto"></div>
           </div>
@@ -95,8 +93,6 @@ export default function OurStorySection() {
                 <span className="text-stone-700 text-lg font-light">
                   Our Photo
                 </span>
-
-                {/* Decorative hearts */}
                 <motion.div
                   className="absolute top-4 right-4 w-6 h-6 text-pink-300"
                   animate={{
@@ -119,25 +115,28 @@ export default function OurStorySection() {
 
           <div ref={textRef} className="space-y-6">
             <SmoothReveal delay={0.4}>
-              <h3 className="text-2xl font-serif text-stone-800">How We Met</h3>
+              <h3 className="text-2xl font-serif text-stone-800">
+                Câu Chuyện Tình Yêu
+              </h3>
             </SmoothReveal>
 
             <SmoothReveal delay={0.6}>
               <p className="text-stone-700 leading-relaxed">
-                It was a crisp autumn morning at the local coffee shop when our
-                eyes first met. Anna was reading her favorite novel, while David
-                was working on his laptop at the next table. A simple
-                &ldquo;excuse me, is this seat taken?&rdquo; turned into hours
-                of conversation and the beginning of our beautiful love story.
+                Tình duyên đã an bài cho chúng tôi gặp nhau trong một buổi chiều
+                mùa thu. My đang đọc sách trong quán cà phê yêu thích, còn Đăng
+                thì đang làm việc trên laptop ở bàn bên cạnh. Một câu hỏi đơn
+                giản "Chỗ này có ai ngồi không?" đã mở ra cuộc trò chuyện kéo
+                dài hàng giờ và khởi đầu cho câu chuyện tình yêu đẹp của chúng
+                tôi.
               </p>
             </SmoothReveal>
 
             <SmoothReveal delay={0.8}>
               <p className="text-stone-700 leading-relaxed">
-                Three years later, during a sunset walk on the beach where we
-                had our first date, David got down on one knee and asked the
-                question that would change our lives forever. We can&apos;t wait
-                to celebrate this special day with all of you!
+                Ba năm sau, trong một buổi chiều tà trên bãi biển nơi chúng tôi
+                có buổi hẹn đầu tiên, Đăng đã quỳ gối và hỏi câu hỏi sẽ thay đổi
+                cuộc đời chúng tôi mãi mãi. Chúng tôi rất hạnh phúc được chia sẻ
+                ngày đặc biệt này cùng tất cả mọi người!
               </p>
             </SmoothReveal>
 

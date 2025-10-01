@@ -36,12 +36,12 @@ export default function RSVPSection() {
         </SmoothReveal>
 
         <SmoothReveal delay={0.4}>
-          <p className="text-xl text-stone-300 mb-4">
-            Join us for our special day
+          <p className="text-xl text-stone-200 mb-4">
+            29 October & 21 November 2025
           </p>
-          <p className="text-stone-400 mb-12 max-w-lg mx-auto">
-            Please confirm your attendance by November 15, 2024. Your presence
-            would make our day even more meaningful.
+          <p className="text-stone-300 mb-12 max-w-lg mx-auto">
+            Kính mời Quý khách tham dự các buổi lễ cưới của chúng tôi. Sự hiện
+            diện của Quý khách sẽ là niềm vinh hạnh lớn cho hai gia đình.
           </p>
         </SmoothReveal>
 

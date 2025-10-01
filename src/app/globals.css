@@ -28,103 +28,108 @@ body {
   html,
   body {
     overflow-x: hidden;
+    max-width: 100vw;
   }
 
-  /* Better touch targets */
-  button,
-  a {
-    min-height: 44px;
-    min-width: 44px;
+  * {
+    max-width: 100%;
   }
 }
 
-/* Custom font weights for minimal design */
-.font-light {
-  font-weight: 300;
-}
-
-/* Smooth scrolling for better UX */
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Enhanced typography */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 300;
-  letter-spacing: -0.02em;
+/* Hide scrollbar but keep functionality */
+::-webkit-scrollbar {
+  width: 6px;
 }
 
-/* Mobile responsive typography */
-@media (max-width: 640px) {
-  h1 {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-light);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-dark);
+}
+
+/* Custom typography */
+.font-script {
+  font-family: "Great Vibes", cursive;
+}
+
+.font-handwriting {
+  font-family: "Dancing Script", cursive;
+}
+
+/* Animation utilities */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
   }
-  h2 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-  h3 {
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+  50% {
+    transform: translateY(-20px);
   }
 }
 
-/* Custom underline styles */
-.underline {
-  text-decoration: none;
-  border-bottom: 1px solid currentColor;
-  transition: border-bottom-color 0.3s ease;
+.animate-fadeIn {
+  animation: fadeIn 1s ease-in;
 }
 
-.underline:hover {
-  border-bottom-color: transparent;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* Image hover effects */
-.image-hover {
-  transition: transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+/* Heart animation */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(1.3);
+  }
+  28% {
+    transform: scale(1);
+  }
+  42% {
+    transform: scale(1.3);
+  }
+  70% {
+    transform: scale(1);
+  }
 }
 
-.image-hover:hover {
-  transform: scale(1.05);
+.animate-heartbeat {
+  animation: heartbeat 2s ease-in-out infinite;
 }
 
-/* Custom CSS cho Skymavis-like effects */
-html {
-  scroll-behavior: smooth;
-}
-
-.bg-gradient-radial {
-  background: radial-gradient(var(--tw-gradient-stops));
-}
-
-/* Thêm một số utility classes */
-.will-change-transform {
-  will-change: transform;
-}
-
-.preserve-3d {
-  transform-style: preserve-3d;
-}
-
-/* Animation cho loading */
+/* Shimmer effect */
 @keyframes shimmer {
   0% {
-    background-position: -200px 0;
+    background-position: -200% 0;
   }
   100% {
-    background-position: calc(200px + 100%) 0;
+    background-position: 200% 0;
   }
 }
 
-.shimmer {
-  animation: shimmer 2s linear infinite;
+.animate-shimmer {
   background: linear-gradient(
     90deg,
     transparent,
@@ -132,4 +137,5 @@ html {
     transparent
   );
   background-size: 200px 100%;
+  animation: shimmer 2s infinite;
 }
