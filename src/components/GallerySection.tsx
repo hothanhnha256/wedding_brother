@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import SmoothReveal from "./SmoothReveal";
 
 const galleryImages = [
@@ -102,15 +103,15 @@ export default function GallerySection() {
         {/* Category Filter */}
         <SmoothReveal delay={0.4}>
           <div className="flex justify-center mb-12">
-            <div className="flex space-x-2 bg-stone-100 p-2 rounded-2xl">
+            <div className="flex space-x-2 bg-stone-50 p-2 rounded-2xl">
               {categories.map((category) => (
                 <motion.button
                   key={category.id}
                   onClick={() => setSelectedCategory(category.id)}
                   className={`px-6 py-2 rounded-xl text-sm font-medium transition-all duration-300 ${
                     selectedCategory === category.id
-                      ? "bg-stone-800 text-white shadow-lg"
-                      : "text-stone-600 hover:text-stone-800 hover:bg-stone-50"
+                      ? "bg-stone-700 text-white shadow-lg"
+                      : "text-stone-700 hover:text-stone-900 hover:bg-stone-100"
                   }`}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -138,10 +139,12 @@ export default function GallerySection() {
                 whileHover={{ scale: 1.05, y: -5 }}
                 onClick={() => setSelectedImage(image.id)}
               >
-                <img
+                <Image
                   src={image.src}
                   alt={image.alt}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                  sizes="(max-width: 768px) 50vw, 33vw"
                 />
 
                 {/* Overlay */}
@@ -174,7 +177,7 @@ export default function GallerySection() {
         <SmoothReveal delay={0.8}>
           <div className="text-center mt-12">
             <motion.button
-              className="inline-flex items-center px-8 py-3 bg-stone-800 text-white rounded-full hover:bg-stone-700 transition-colors duration-300"
+              className="inline-flex items-center px-8 py-3 bg-stone-700 text-white rounded-full hover:bg-stone-800 transition-colors duration-300"
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -208,17 +211,25 @@ export default function GallerySection() {
             onClick={() => setSelectedImage(null)}
           >
             <motion.div
-              className="relative max-w-4xl max-h-[90vh] m-4"
+              className="relative max-w-4xl max-h-[90vh] m-4 aspect-square"
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.8, opacity: 0 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               onClick={(e) => e.stopPropagation()}
             >
-              <img
-                src={galleryImages.find((img) => img.id === selectedImage)?.src}
-                alt={galleryImages.find((img) => img.id === selectedImage)?.alt}
-                className="w-full h-full object-contain rounded-2xl shadow-2xl"
+              <Image
+                src={
+                  galleryImages.find((img) => img.id === selectedImage)?.src ||
+                  ""
+                }
+                alt={
+                  galleryImages.find((img) => img.id === selectedImage)?.alt ||
+                  ""
+                }
+                fill
+                className="object-contain rounded-2xl shadow-2xl"
+                sizes="90vw"
               />
 
               {/* Close button */}

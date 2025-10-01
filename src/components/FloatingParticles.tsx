@@ -2,7 +2,6 @@
 
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import { motion } from "framer-motion";
 
 export default function FloatingParticles() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -11,7 +10,7 @@ export default function FloatingParticles() {
     if (!containerRef.current) return;
 
     // Tạo particles với GSAP
-    const particles = Array.from({ length: 12 }, (_, i) => {
+    const particles = Array.from({ length: 12 }, () => {
       const particle = document.createElement("div");
       particle.className =
         "absolute w-1 h-1 bg-stone-200 rounded-full opacity-30";

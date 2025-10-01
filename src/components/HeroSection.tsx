@@ -62,13 +62,13 @@ export default function HeroSection() {
         className="absolute inset-0 opacity-5"
         style={{
           backgroundImage:
-            "url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d6d3d1' fill-opacity='0.3'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
+            "url('data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d97706' fill-opacity='0.3'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')",
         }}
       />
 
       <div className="text-center px-4 max-w-4xl mx-auto relative z-10">
         <SmoothReveal delay={0.2}>
-          <p className="text-sm text-stone-500 tracking-[0.2em] uppercase mb-8">
+          <p className="text-sm text-stone-600 tracking-[0.2em] uppercase mb-8">
             Wedding Invitation
           </p>
         </SmoothReveal>
@@ -82,7 +82,7 @@ export default function HeroSection() {
 
         <p
           ref={subtitleRef}
-          className="text-xl md:text-2xl text-stone-600 mb-12 font-light tracking-wide"
+          className="text-xl md:text-2xl text-stone-700 mb-12 font-light tracking-wide"
         >
           are getting married
         </p>
@@ -92,15 +92,15 @@ export default function HeroSection() {
         </SmoothReveal>
 
         <SmoothReveal delay={0.8}>
-          <p className="text-lg text-stone-600 mb-2">December 15, 2024</p>
-          <p className="text-sm text-stone-500 mb-12">
+          <p className="text-lg text-stone-700 mb-2">December 15, 2024</p>
+          <p className="text-sm text-stone-600 mb-12">
             Grand Ballroom, The Ritz-Carlton
           </p>
         </SmoothReveal>
 
         <SmoothReveal delay={1.2}>
           <div className="max-w-md mx-auto">
-            <p className="text-sm text-stone-500 mb-6">
+            <p className="text-sm text-stone-600 mb-6">
               Countdown to our special day
             </p>
             <CountdownTimer targetDate="2024-12-15T17:00:00+07:00" />
@@ -109,7 +109,7 @@ export default function HeroSection() {
 
         {/* Scroll indicator */}
         <motion.div
-          className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+          className="absolute bottom-10 left-1/2 -translate-x-1/2 flex items-center justify-center"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 1 }}
@@ -118,7 +118,7 @@ export default function HeroSection() {
             href="#story"
             animate={{ y: [0, 10, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-            className="text-stone-600 hover:text-stone-800 transition-colors cursor-pointer block"
+            className="text-stone-600 hover:text-stone-800 transition-colors cursor-pointer w-10 h-10 flex items-center justify-center"
           >
             <svg
               className="w-6 h-6"

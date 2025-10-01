@@ -76,10 +76,10 @@ export default function RSVPSection() {
                     Will you be attending?
                   </option>
                   <option value="yes" className="bg-stone-900">
-                    Yes, I'll be there! ❤️
+                    Yes, I&apos;ll be there! ❤️
                   </option>
                   <option value="no" className="bg-stone-900">
-                    Sorry, can't make it 😢
+                    Sorry, can&apos;t make it 😢
                   </option>
                 </motion.select>
               </div>
@@ -96,7 +96,7 @@ export default function RSVPSection() {
               </div>
               <motion.button
                 type="submit"
-                className="w-full bg-white text-stone-900 py-3 px-6 rounded-lg hover:bg-stone-100 transition-colors font-medium"
+                className="w-full bg-white text-stone-900 py-3 px-6 rounded-lg hover:bg-white transition-colors font-medium"
                 whileHover={{ scale: 1.02, y: -2 }}
                 whileTap={{ scale: 0.98 }}
                 transition={{ type: "spring", stiffness: 400, damping: 17 }}
@@ -108,7 +108,7 @@ export default function RSVPSection() {
         </SmoothReveal>
 
         <SmoothReveal delay={0.8}>
-          <div className="flex justify-center space-x-6 text-sm text-stone-400">
+          <div className="flex justify-center space-x-6 text-sm text-stone-300">
             <motion.a
               href="mailto:anna.david@wedding.com"
               className="hover:text-white transition-colors"

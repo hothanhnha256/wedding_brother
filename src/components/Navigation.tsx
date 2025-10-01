@@ -43,7 +43,7 @@ export default function Navigation() {
               whileHover={{ scale: 1.05 }}
               transition={{ type: "spring", stiffness: 400, damping: 17 }}
             >
-              A & D
+              M & Đ
             </motion.div>
 
             <ul className="hidden md:flex space-x-8">
@@ -56,7 +56,7 @@ export default function Navigation() {
                 >
                   <motion.a
                     href={item.href}
-                    className="text-stone-600 hover:text-stone-800 transition-colors duration-300 relative"
+                    className="text-stone-700 hover:text-stone-900 transition-colors duration-300 relative"
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
                   >
@@ -79,19 +79,19 @@ export default function Navigation() {
             >
               <div className="w-6 h-6 flex flex-col justify-around">
                 <motion.span
-                  className="block h-0.5 w-6 bg-stone-600 rounded"
+                  className="block h-0.5 w-6 bg-stone-700 rounded"
                   animate={
                     isMenuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }
                   }
                   transition={{ duration: 0.3 }}
                 />
                 <motion.span
-                  className="block h-0.5 w-6 bg-stone-600 rounded"
+                  className="block h-0.5 w-6 bg-stone-700 rounded"
                   animate={isMenuOpen ? { opacity: 0 } : { opacity: 1 }}
                   transition={{ duration: 0.3 }}
                 />
                 <motion.span
-                  className="block h-0.5 w-6 bg-stone-600 rounded"
+                  className="block h-0.5 w-6 bg-stone-700 rounded"
                   animate={
                     isMenuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }
                   }

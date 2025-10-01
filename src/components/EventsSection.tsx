@@ -21,13 +21,13 @@ const weddingEvents = [
 
 export default function EventsSection() {
   return (
-    <section id="events" className="py-20 bg-stone-50 relative overflow-hidden">
+    <section id="events" className="py-20 bg-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-0 left-0 w-full h-full opacity-5">
         <div className="absolute top-20 left-10 w-40 h-40">
           <motion.svg
             viewBox="0 0 120 120"
-            className="w-full h-full text-stone-300"
+            className="w-full h-full text-stone-200"
             initial={{ rotate: 0 }}
             animate={{ rotate: 360 }}
             transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
@@ -59,7 +59,7 @@ export default function EventsSection() {
               Wedding Events
             </h2>
             <div className="w-24 h-1 bg-stone-300 mx-auto mb-6"></div>
-            <p className="text-stone-600 max-w-2xl mx-auto">
+            <p className="text-stone-700 max-w-2xl mx-auto">
               Join us for a day filled with love, laughter, and unforgettable
               memories
             </p>
@@ -85,7 +85,7 @@ export default function EventsSection() {
 
                 <div className="flex-shrink-0 relative mr-8">
                   <motion.div
-                    className="w-4 h-4 bg-stone-800 rounded-full"
+                    className="w-4 h-4 bg-stone-600 rounded-full"
                     whileHover={{ scale: 1.5 }}
                     transition={{ type: "spring", stiffness: 400, damping: 17 }}
                   />
@@ -98,7 +98,7 @@ export default function EventsSection() {
                   <h3 className="text-xl font-serif text-stone-800 mb-1">
                     {event.title}
                   </h3>
-                  <p className="text-stone-600 text-sm">{event.description}</p>
+                  <p className="text-stone-700 text-sm">{event.description}</p>
                 </div>
               </motion.div>
             </SmoothReveal>
@@ -115,10 +115,10 @@ export default function EventsSection() {
               <h3 className="text-xl font-serif text-stone-800 mb-4">
                 Location
               </h3>
-              <p className="text-stone-600 mb-2">
+              <p className="text-stone-700 mb-2">
                 Grand Ballroom, The Ritz-Carlton
               </p>
-              <p className="text-sm text-stone-500 mb-4">
+              <p className="text-sm text-stone-600 mb-4">
                 123 Luxury Avenue, Downtown
               </p>
               <motion.a

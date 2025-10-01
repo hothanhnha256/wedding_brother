@@ -87,12 +87,12 @@ export default function OurStorySection() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div ref={imageRef} className="relative">
             <motion.div
-              className="aspect-square bg-stone-200 rounded-2xl overflow-hidden shadow-2xl"
+              className="aspect-square bg-stone-100 rounded-2xl overflow-hidden shadow-2xl"
               whileHover={{ scale: 1.05 }}
               transition={{ duration: 0.3 }}
             >
-              <div className="w-full h-full bg-gradient-to-br from-stone-300 to-stone-400 flex items-center justify-center relative">
-                <span className="text-stone-600 text-lg font-light">
+              <div className="w-full h-full bg-gradient-to-br from-stone-200 to-stone-300 flex items-center justify-center relative">
+                <span className="text-stone-700 text-lg font-light">
                   Our Photo
                 </span>
 
@@ -123,21 +123,21 @@ export default function OurStorySection() {
             </SmoothReveal>
 
             <SmoothReveal delay={0.6}>
-              <p className="text-stone-600 leading-relaxed">
+              <p className="text-stone-700 leading-relaxed">
                 It was a crisp autumn morning at the local coffee shop when our
                 eyes first met. Anna was reading her favorite novel, while David
-                was working on his laptop at the next table. A simple "excuse
-                me, is this seat taken?" turned into hours of conversation and
-                the beginning of our beautiful love story.
+                was working on his laptop at the next table. A simple
+                &ldquo;excuse me, is this seat taken?&rdquo; turned into hours
+                of conversation and the beginning of our beautiful love story.
               </p>
             </SmoothReveal>
 
             <SmoothReveal delay={0.8}>
-              <p className="text-stone-600 leading-relaxed">
+              <p className="text-stone-700 leading-relaxed">
                 Three years later, during a sunset walk on the beach where we
                 had our first date, David got down on one knee and asked the
-                question that would change our lives forever. We can't wait to
-                celebrate this special day with all of you!
+                question that would change our lives forever. We can&apos;t wait
+                to celebrate this special day with all of you!
               </p>
             </SmoothReveal>
 
