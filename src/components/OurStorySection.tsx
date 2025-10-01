@@ -123,11 +123,7 @@ export default function OurStorySection() {
             <SmoothReveal delay={0.6}>
               <p className="text-stone-700 leading-relaxed">
                 Tình duyên đã an bài cho chúng tôi gặp nhau trong một buổi chiều
-                mùa thu. My đang đọc sách trong quán cà phê yêu thích, còn Đăng
-                thì đang làm việc trên laptop ở bàn bên cạnh. Một câu hỏi đơn
-                giản "Chỗ này có ai ngồi không?" đã mở ra cuộc trò chuyện kéo
-                dài hàng giờ và khởi đầu cho câu chuyện tình yêu đẹp của chúng
-                tôi.
+                mùa thu. .
               </p>
             </SmoothReveal>
 
